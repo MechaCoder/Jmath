@@ -12,7 +12,6 @@ button{
 	font-size: 1em;
 	background-color: #672422;
 	color: #7A942E;
-
 }
 p{
 	margin: 2px;
@@ -48,20 +47,59 @@ p{
 	width: 100%;
 	background-color: #3A403B;
 	text-align: center;
-	font-size: 2.5em
+	font-size: 2.5em;
 	color: white;
 }
+#canvasBox{
+	background-color: darkgray;
+}
+#canvas1{
+	background-color: #171412;
+}
+#canvas2{
+	/*this is the ontop*/
+}
+#sidebar{
+	float: right;
+	clear: right;
+	width: 30%;
+	/*height: 60%;*/
+	font-size: 2em;
+}
+#Level{
+	font-size: 2em;
+	background-color: blue;
+	font-size: 1.5em;
+}
+#QwestionBox{
+	font-family: Calligraffitti;
+	text-align: left;
+	background-color: #785E49;
+
+}
+/*.. classes ..*/
 .title{
 	font-size: 3em;
 }
 .subtitle{
-	font-size: 2em;
+	font-size: 1.2em;
+}
+.center{
+	text-align: center;
 }
 .input{
-	width: 70%
+	background-color: #171412;
+	color: #976E9A;
+	width: 70%;
+	font-size: 1em;
 }
 .type{
 	background-color: #C3272B;
 	width: 45%;
 	font-size: 2.5em;
+}
+.canvas{
+	width: 68%;
+	height: 80%;
+	position: absolute;
 }
