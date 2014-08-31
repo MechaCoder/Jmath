@@ -1,0 +1,42 @@
+body{
+	background-color: #27221F;
+}
+header{
+	width:100%;
+	height: 15%;
+	background-color: #766980;
+	color:white;
+	text-align: center;
+}
+input{
+	width:30%;
+	font-size:2em;
+}
+button{
+	font-size: 1.5em;
+}
+#content{
+	float: right;
+	width: 80%;
+
+}
+#sidebar{
+	float:right;
+	clear:right;
+	text-align: center;
+	background-color: gray;
+	width:20%;
+}
+.title{
+	font-size: 3.5em;
+	font-family: Calligraffitti;
+}
+.Canvas{
+	width: 75%;
+	height: 80%;
+	position: absolute;
+	border: 5px solid #7A942E;
+}
+.firstCanvas{
+	background-color: #171412;
+}
