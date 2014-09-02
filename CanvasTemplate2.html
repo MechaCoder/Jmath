@@ -29,14 +29,21 @@
       				var context_21 = canvas_21.getContext('2d');
       				var canvas_22 = document.getElementById('c_2Num2');
       				var context_22 = canvas_22.getContext('2d');
-      				function RenderFunc (argument) {
+      				//
+      				function RenderFunc() {
+      					//Cear Canvas before Render
+      					context_11.clearRect(0,0,canvas_11.width,canvas_11.height);
+      					context_12.clearRect(0,0,canvas_12.width,canvas_12.height);
+      					context_21.clearRect(0,0,canvas_21.width,canvas_22.height);
+      					context_22.clearRect(0,0,canvas_22.width,canvas_22.height);
+      					// Trasmit numbers
       					num1_1 = document.getElementById('numBox1_1').value;
       					num1_2 = document.getElementById('numBox1_2').value;
       					num2_1 = document.getElementById('numBox2_1').value;
-      					nun2_2 = document.getElementById('numBox2_2').value;
+      					num2_2 = document.getElementById('numBox2_2').value;
       					//./canvas_11
       					context_11.beginPath();
-      					switch(num1_1){
+      					switch(parseInt(num1_1)){
       						case 1:
       							context_11.moveTo(0,10);
       							context_11.lineTo(290,300);
@@ -150,7 +157,7 @@
       					context_11.stroke();
       					//
       					context_12.beginPath();
-	      				switch(num1_2){
+	      				switch(parseInt(num1_2)){
 	      					case 1:
 	      						context_12.moveTo(10,0);
 	      						context_12.lineTo(300,290);
@@ -264,7 +271,7 @@
 	      				context_12.stroke();
       					//
       					context_21.beginPath();
-      					switch(num2_1){
+      					switch(parseInt(num2_1)){
       						case 1:
       							context_21.moveTo(10,300);
       							context_21.lineTo(300,10);
@@ -378,7 +385,7 @@
 	      				context_21.stroke();
 	      				//
 	      				context_22.beginPath();
-	      				switch(num2_2){
+	      				switch(parseInt(num2_2)){
 	      					case 1:
 	      						context_22.moveTo(0,290);
 	      						context_22.lineTo(290,0);
