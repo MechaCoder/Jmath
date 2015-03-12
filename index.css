@@ -35,11 +35,13 @@ p{
 #clearLeft{
 	float:left;
 	clear:left;
+	margin-left: 10%;
 	text-align: center;
 }
 #clearRight{
 	float:right;
 	clear:right;
+	margin-right: 10%;
 	text-align: center;
 }
 #versions{
@@ -75,7 +77,6 @@ p{
 	font-family: Calligraffitti;
 	text-align: left;
 	background-color: #785E49;
-
 }
 /*.. classes ..*/
 .title{

@@ -40,3 +40,10 @@ button{
 .firstCanvas{
 	background-color: #171412;
 }
+input#numBox1, input#numBox2{
+	background-color: darkgray;
+	border: none;
+	border-bottom: 1px solid black;
+	margin-bottom: 10px;
+}
+span#theX{position: absolute; color:white; right: 77px; font-size: 36px}

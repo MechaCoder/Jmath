@@ -11,7 +11,7 @@
 			var num2_2 =0;
 		</script>
 	</HEAD>
-	<BODY onload="RenderFunc()">
+	<BODY>
 		<header class='title'>
 			Template
 		</header>
@@ -31,20 +31,43 @@
       				var canvas_22 = document.getElementById('c_2Num2');
       				var context_22 = canvas_22.getContext('2d');
       				//
-      				function RenderFunc() {
-      					var testVal = "";
-      					//Cear Canvas before Render
+      				function buttonClick() {
+      					console.log('MP > buttonClick');
+      					var go_val = 0;
+      					go_val = 0;
+      					if(testLen('numBox1') == false){
+      						go_val = go_val + 1;
+      					};
+      					if(testLen('numBox2') == false){
+      						go_val = go_val + 1;
+      					};
+      					console.log(go_val);
+      					if(go_val == 0){
+      						console.log('rendering')
+      						RenderFunc();
+      					}else{
+      						console.log('clearCanvas');
+      						clearCanvas();
+      						var x = canvas_11.width / 2;
+      						var y = canvas_11.height / 2;
+      						context_11.font = '30pt Calibri';
+      						context_11.lineWidth = 1;
+      						context_11.textAlign = 'center';
+      						context_11.strokeStyle = '#48929B';
+      						context_11.strokeText('Input Error',x,y);
+      					};
+      				};
+
+      				function clearCanvas(){
       					context_11.clearRect(0,0,canvas_11.width,canvas_11.height);
       					context_12.clearRect(0,0,canvas_12.width,canvas_12.height);
       					context_21.clearRect(0,0,canvas_21.width,canvas_22.height);
       					context_22.clearRect(0,0,canvas_22.width,canvas_22.height);
-      					// Trasmit numbers
-      					/*
-      					num1_1 = document.getElementById('numBox1_1').value;
-      					num1_2 = document.getElementById('numBox1_2').value;
-      					num2_1 = document.getElementById('numBox2_1').value;
-      					num2_2 = document.getElementById('numBox2_2').value;
-      					*/
+      				}
+
+      				function RenderFunc() {
+      					var testVal = "";
+      					clearCanvas();
       					var NumVal1 = document.getElementById('numBox1').value;
        					var NumVal2 = document.getElementById('numBox2').value;
       					num1_1 = NumVal1.slice(0,1);
@@ -508,28 +531,24 @@
 	      				context_22.strokeStyle = 'blue';
 	      				context_22.stroke();
       				};
+
+      				function testLen(str_text){
+      					data = document.getElementById(str_text).value;
+      					if (data.length > 2 ) {
+      						return false;
+      					} else {
+      						return true;
+      					};
+      				}
 				</script>
 			</div>
 			<div id='Sidebar'>
 				<div id='qwestionBox'>
-					<input id='numBox1' type='textBox'><br />
-					<input id='numBox2' type='textBox'><br />
-					<!--
-					<input id='numBox1_1' type='textBox'> <input id='numBox1_2' type='textBox'><br />
-					<input id='numBox2_1' type='textBox'> <input id='numBox2_2' type='textBox'><br />-->
-					<button onclick='RenderFunc()'>Render</button><br />
-				</div>
-				<!--<div id='AwserBox'>
-					<input type='textbox'>
-				</div>-->
-				<div id='keypad'>
-					<button id='Kpad_7' class='Kpad'>7</button><button id=b'Kpad_8' class='Kpad'>8</button><button id='Kpad_9' class='Kpad'>9</button><br />
-					<button id='Kpad_4' class='Kpad'>4</button><button id='Kpad_5' class='Kpad'>5</button><button id='Kpad_6' class='Kpad'>6</button><br />
-					<button id='Kpad_1' class='Kpad'>1</button><button id='Kpad_8' class='Kpad'>2</button><button id='Kpad_3' class='Kpad'>3</button><br />
-					<button id='Kpad_0' class='kpad'>0</button><br />
+					<input id='numBox1' type='textBox' style='margin-top:10px'><br />
+					<input id='numBox2' type='textBox'> <span id='theX'>x</span> <br />
+					<button onclick='buttonClick()'> Render </button><br />
 				</div>
 			</div>
-		</div>
 		<footer>
 
 		</footer>
